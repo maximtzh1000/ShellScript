@@ -1,0 +1,16 @@
+# 03/20/2015
+# My first shell script Author: Zhao Tan
+
+#!/bin/bash
+
+
+echo “Guess the secret color: red, blue, yellow, purple, or orange”
+read COLOR
+
+until [ $COLOR == "purple" ]
+do
+	echo “Incorrect. Guess again.”
+	read COLOR
+done
+
+echo "Correct."
