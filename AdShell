@@ -1,2 +1,9 @@
 #!/bin/bash
-echo "Try Push!"
+# func
+# A simle function
+
+repeat () {
+	echo "I don't know $1 $2 "
+}
+
+repeat your Name
