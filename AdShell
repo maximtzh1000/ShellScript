@@ -1,9 +1,15 @@
 #!/bin/bash
-# func
-# A simle function
 
-repeat () {
-	echo "I don't know $1 $2 "
+# nested
+# Calling on function from another
+
+number_one () {
+	echo "This is the first function speaking ..."
+	number_two
 }
 
-repeat your Name
+number_two () {
+	echo "This is now the second function speaking ... "
+}
+
+number_one
