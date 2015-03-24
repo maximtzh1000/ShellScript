@@ -7,7 +7,7 @@
 echo “Guess the secret color: red, blue, yellow, purple, or orange”
 read COLOR
 
-until [ $COLOR == "purple" ]
+until [ $COLOR == "blue" ]
 do
 	echo “Incorrect. Guess again.”
 	read COLOR
