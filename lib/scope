@@ -1,0 +1,14 @@
+scope () {
+	local lclVAR=1
+	glbVAR=2
+	echo "lcoal variable here is $lclVAR"
+	echo "global variable here is $glbVAR"
+}
+
+another_scope_function(){
+	echo "This is another scope function..."
+}
+
+yet_another_function(){
+	echo "This is yet another function..."
+}
