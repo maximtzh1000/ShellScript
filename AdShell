@@ -2,11 +2,7 @@
 
 # scope
 
-. lib/scope
-
-scope
-scope
-another_scope_function
-yet_another_function
-
-exit 0
+if [ -r get.sh ] && [ -x get.sh ]
+then
+	echo "get.sh exists, is readable and executable!"
+fi

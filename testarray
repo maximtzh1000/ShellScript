@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# array
+# A script for populating an array from a file
+
+populated=( ` cat sports.txt | tr '\n' ' ' `)
+echo ${populated[@]}
+
+exit 0
