@@ -1,15 +1,15 @@
 #!/bin/bash
 
-# nested
-# Calling on function from another
+# scope
 
-number_one () {
-	echo "This is the first function speaking ..."
-	number_two
+scope () {
+	local lclVAR=1
+	glbVAR=1
+	echo "lcoal variable here is $lclVAR"
+	echo "global variable here is $glbVAR"
 }
 
-number_two () {
-	echo "This is now the second function speaking ... "
-}
+scope
 
-number_one
+echo "lcoal variable outside is $lclVAR"
+echo "global variable outside is $glbVAR"
