@@ -2,14 +2,10 @@
 
 # scope
 
-scope () {
-	local lclVAR=1
-	glbVAR=1
-	echo "lcoal variable here is $lclVAR"
-	echo "global variable here is $glbVAR"
-}
+. lib/scope
 
 scope
+another_scope_function
+yet_another_function
 
-echo "lcoal variable outside is $lclVAR"
-echo "global variable outside is $glbVAR"
+exit 0
