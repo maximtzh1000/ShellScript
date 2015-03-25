@@ -5,6 +5,7 @@
 . lib/scope
 
 scope
+scope
 another_scope_function
 yet_another_function
 
