@@ -1,0 +1,50 @@
+#!/bin/bash
+
+# sysinfo_page - A script to produce an HTML file
+
+##### Constants
+
+title="My System Information"
+RIGHT_NOW=$(date +"%x %r %Z")
+TIME_STAMP="Update on $RIGHT_NOW by $USER"
+
+##### Functions
+
+system_info(){
+    echo "<h2>System release info</h2>"
+    echo "<p>Function not yet implemented</p>"
+}
+
+show_uptime(){
+    echo "<h2>System uptime</h2>"
+    echo "<pre>"
+    uptime
+    echo "</pre>"
+}
+
+drive_space(){
+    echo "<h2>Filesystem space</h2>"
+    echo "<pre>"
+    df
+    echo "</pre>"
+}
+
+##### Main
+
+cat <<- _EOF_
+    <html>
+    <head>
+        <title>
+        $title $HOSTNAME
+        </title>
+    </head>
+
+    <body>
+    <h1>$title $HOSTNAME</h1>
+    <p>$TIME_STAMP</p>
+    $(system_info)
+    $(show_uptime)
+    $(drive_space)
+    </body>
+    </html>
+_EOF_
